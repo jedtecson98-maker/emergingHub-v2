@@ -26,6 +26,7 @@ div {
 .searchBar {
     background-color: rgb(35, 47, 62);
     justify-content: center;
+    align-items: center;
     height: 100px;
 }
 .inputBar {
@@ -41,7 +42,6 @@ div {
 .encouragementInner {
     width: 70%;
     height: 150px;
-    background-color: rgb(17, 17, 17);
     padding: 20px;
     justify-content: center;
 }

@@ -46,16 +46,28 @@ a:hover {
 }
 div > button[id=button]  {
     justify-self: center;
+    background-color: white;
+    border-style: solid;
     width: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 3px;
+}
+button[id=button]:hover {
+    background-color: rgb(29, 40, 52);
+    color: white;
 }
 .infoBox1[id=shadow]:hover {
     box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.1);
 }
 .infoBox1[id=shadow] {
+    border-color: rgba(0,0,0,0.2);
     margin-left: 50px;
     border-width: 1px;
     border-style: solid;
     padding-bottom: 15px;
+
+    transition: box-shadow 150ms;
 }
 .infoBox1[id=normal] {
     padding: 40px;
