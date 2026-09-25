@@ -1,0 +1,16 @@
+.profilePicture {
+    border-radius: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    min-width: 250px;
+    min-height: 250px;
+}
+.profile {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, img > {
+    display: inline-flexbox;
+}
+.profile > h3 {
+    margin-left: 20px;
+}

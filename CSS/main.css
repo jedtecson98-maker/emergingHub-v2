@@ -1,0 +1,82 @@
+p, h1, h2, h3 {
+    font-family: Arial;
+}
+div {
+    display: flex;
+    width: 100%;
+}
+.header {
+    padding: 30px;
+    background-color: rgb(29, 40, 52);
+}
+.leftSide {
+    background-color: lightblue;
+    height: 50px;
+    width: 350px;
+    justify-content: center;
+}
+.rightSide {
+    background-color: lightblue;
+    height: 50px;
+    width: 120px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 50px;
+}
+.searchBar {
+    background-color: rgb(35, 47, 62);
+    justify-content: center;
+    height: 100px;
+}
+.inputBar {
+    height: 50%;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.encouragement {
+    background-color: rgb(29, 40, 52);
+    padding: 20px;
+    justify-content: center;
+}
+.encouragementInner {
+    width: 70%;
+    height: 150px;
+    background-color: rgb(17, 17, 17);
+    padding: 20px;
+    justify-content: center;
+}
+.innerImage {
+    width: 20%;
+    height: 100%;
+    background-color: aqua;
+    margin-left: 10px;
+}
+.innerText {
+    margin-left: 10px;
+    width: 200px;
+    height: fit-content;
+    background-color: aqua;
+
+}
+.findButton {
+    height: 40%;
+    vertical-align: middle;
+    margin-left: 20px;
+    padding: 30px;
+    justify-self: center;
+}
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(234, 237, 242);
+}
+.wrapper {
+    text-align: center;
+    background-color: white;
+}
+.button {
+    position: absolute;
+    top: 50%;
+}
