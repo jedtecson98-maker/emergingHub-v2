@@ -1,112 +1,103 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="CSS/infoCards.css">
-        <link rel="stylesheet" type="text/css" href="CSS/main.css">
-        <link rel="stylesheet" type="text/css" href="CSS/profileCard.css">
-        <title>Amazon T-Level Hub</title>
-        <style>
-            .inputBar {
-                height: 44px;
-                padding-left: 15px;
-                padding-right: 15px;
-                border-radius: 4px;
-            }
-            .searchButton {
-                margin-left: 20px;
-                height: 44px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="header">
-            <div class="leftSide">
-                <p style="margin-right: 20px;">Burger Menu <span style="margin-left: 20px;">"Amazon T-Level"</span></p>
-            </div>
-            <div class="rightSide">
-                <p>My Applications</p>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Amazon T-Level Hub</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="leftSide">
+            <button class="menuButton" aria-label="Open menu"><i class="fa fa-bars"></i></button>
+            <a class="logo" href="#" aria-label="Amazon T-Level Hub home"><img src="images/amazon-logo.png" alt="Amazon"></a>
         </div>
-        <div class="searchBar">
-            <input placeholder="Search for colleges" class="inputBar" style="width: 686px;">
-            <input placeholder="Enter location" class="inputBar" style="width: 343;">
-            <button class="searchButton"></button>
+        <div class="rightSide">
+            <a class="headerLink" href="#"><i class="fa fa-file-text-o"></i>My Applications</a>
         </div>
-        <div class="encouragement">
-            <div class="encouragementInner">
-                <div class="innerImage">
-                    <img src="images/placeholder.jpg" style="width: 100%;">
-                </div>
-                <div class="innerImage">
-                    <img src="images/placeholder.jpg" style="width: 100%;">
-                </div>
-                <div class="innerText">
-                    <p style="font-size: 20px;">
-                        Something about <br>T-Levels <br> 
-                        <span style="font-size: 13px;">Body body body body body body body body body body body body body body body body body body.</span>
-                    </p>
-                </div>
+    </div>
+
+    <div class="searchBar">
+        <input placeholder="Search for colleges" class="inputBar college" aria-label="Search for colleges">
+        <input placeholder="Enter location" class="inputBar location" aria-label="Enter location">
+        <button class="searchButton" aria-label="Search"><i class="fa fa-search"></i></button>
+    </div>
+
+    <div class="encouragement">
+        <div class="encouragementInner">
+            <div class="innerImage">
+                <img src="images/placeholder.jpg" alt="">
+            </div>
+            <div class="innerImage">
+                <img src="images/placeholder.jpg" alt="">
+            </div>
+            <div class="innerText">
+                <p>
+                    Start Building Your Future with T Levels
+                    <span>Whether you're a student, a teacher, or a parent or carer, discover how T Level industry placements, apprenticeships and career pathways at Amazon can help you plan what comes next.</span>
+                </p>
             </div>
         </div>
-        <div class="container">
-            <article class="infoBox1" id="normal">
-                <h1>Opportunities for students</h1>
-                <h2>At Amazon, what we’re building today defines tomorrow. Explore internships, apprenticeships, and full-time roles where you can think big, learn from others, and make an impact.</h2>
-                <div>
-                    <button id="button">Find your role</button>
-                </div>
+    </div>
+
+    <div class="container first">
+        <article class="infoBox1">
+            <h1>Opportunities for Students</h1>
+            <h2>Amazon offers a range of opportunities for students who want to gain real-world experience and develop valuable skills, whether you are studying a T Level, considering an apprenticeship, or planning your next steps after education.</h2>
+            <div class="actions">
+                <button class="button">Find your role</button>
+            </div>
+        </article>
+        <article class="infoBox1">
+            <h1>Opportunities for Teachers</h1>
+            <h2>Teachers play an important role in helping students make informed decisions about their education and career pathways. Find resources designed to help you guide students towards future opportunities.</h2>
+            <div class="actions">
+                <button class="button">Access resources</button>
+            </div>
+        </article>
+        <article class="infoBox1">
+            <h1>Opportunities for Parents &amp; Carers</h1>
+            <h2>Parents and carers play a key role in supporting young people as they make decisions about education, training and careers. Find information to help you understand the opportunities available.</h2>
+            <div class="actions">
+                <button class="button">Support your child</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="container section">
+        <p class="sectionTitle">Frequently Asked Questions</p>
+        <div class="cards">
+            <article class="infoBox1 media">
+                <img src="images/thumbnail.jpg" alt="">
+                <h1>What is a T Level?</h1>
+                <h2>A two-year qualification that combines classroom learning with industry experience.</h2>
+                <a href="#">Learn more</a>
             </article>
-            <article class="infoBox1" id="normal">
-                <h1>Opportunities for students</h1>
-                <h2>At Amazon, what we’re building today defines tomorrow. Explore internships, apprenticeships, and full-time roles where you can think big, learn from others, and make an impact.</h2>
-                <div>
-                    <button id="button">Find your role</button>
-                </div>
+            <article class="infoBox1 media">
+                <img src="images/thumbnail.jpg" alt="">
+                <h1>What can students do after a T Level?</h1>
+                <h2>Students can progress to university, apprenticeships or skilled employment.</h2>
+                <a href="#">Learn more</a>
             </article>
-            <article class="infoBox1" id="normal">
-                <h1>Opportunities for students</h1>
-                <h2>At Amazon, what we’re building today defines tomorrow. Explore internships, apprenticeships, and full-time roles where you can think big, learn from others, and make an impact.</h2>
-                <div>
-                    <button id="button">Find your role</button>
-                </div>
+            <article class="infoBox1 media">
+                <img src="images/thumbnail.jpg" alt="">
+                <h1>Why are industry placements important?</h1>
+                <h2>They help students gain practical experience and develop workplace skills.</h2>
+                <a href="#">Learn more</a>
             </article>
         </div>
-        <div class="container" style="display: block;">
-            <div class="container">
-                <p style="font-size: 35px;">Innovate with us</p>
-            </div>
-            <div class="container">
-                <article class="infoBox1" id="shadow">
-                    <img src="images/thumbnail.jpg">
-                    <h1>Header</h1>
-                    <h2>Body body body body body body body body body body body</h2>
-                    <a>Learn more</a>
-                </article>
-                <article class="infoBox1" id="shadow">
-                    <img src="images/thumbnail.jpg">
-                    <h1>Header</h1>
-                    <h2>Body body body body body body body body body body body</h2>
-                    <a>Learn more</a>
-                </article>
-                <article class="infoBox1" id="shadow">
-                    <img src="images/thumbnail.jpg">
-                    <h1>Header</h1>
-                    <h2>Body body body body body body body body body body body</h2>
-                    <a>Learn more</a>
-                </article>
-            </div>
+    </div>
+
+    <div class="container">
+        <div class="profileWrap">
+            <img src="images/placeholder.jpg" class="profilePicture" alt="Profile picture">
+            <article class="profile">
+                <h1>Student Name</h1>
+                <h2>T Level Industry Placement &#124; Amazon Operations</h2>
+                <h3>"This placement helped me build real skills for my future career."</h3>
+            </article>
         </div>
-        <div class="container">
-            <div class="container" style="align-content: start; padding-left: 20px;padding-right: 20px; background-color: rgb(243, 243, 243); padding: 20px;">
-                <img src="images/placeholder.jpg" class="profilePicture">
-                <article class="profile">
-                    <h1>Kris Dreemurr</h1>
-                    <h2>Moss eater &#124; Lightner &#124; Hometown</h2>
-                    <h3>It's what they would call "you"</h3>
-                </article>
-            </div>
-            </div>
-    </body>
+    </div>
+</body>
 </html>

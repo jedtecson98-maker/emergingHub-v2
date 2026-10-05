@@ -1,82 +1,266 @@
-p, h1, h2, h3 {
-    font-family: Arial;
+/* ---------- Font ---------- */
+/* Amazon Ember is a proprietary font. Put your licensed font files in /fonts
+   with the names below (or edit the paths). If they are missing, the site
+   falls back to Arial. */
+
+@font-face {
+    font-family: "Amazon Ember";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Amazon Ember"), local("AmazonEmber-Regular"),
+         url("../fonts/AmazonEmber_Rg.woff2") format("woff2"),
+         url("../fonts/AmazonEmber_Rg.woff") format("woff");
 }
-div {
-    display: flex;
-    width: 100%;
+@font-face {
+    font-family: "Amazon Ember";
+    font-weight: 700;
+    font-style: normal;
+    src: local("Amazon Ember Bold"), local("AmazonEmber-Bold"),
+         url("../fonts/AmazonEmber_Bd.woff2") format("woff2"),
+         url("../fonts/AmazonEmber_Bd.woff") format("woff");
 }
+
+:root {
+    --nav-dark: #131921;
+    --nav-mid: #232f3e;
+    --hero-bg: #37475a;
+    --page-bg: #eaeded;
+    --card-bg: #ffffff;
+    --orange: #ff9900;
+    --orange-soft: #febd69;
+    --yellow: #ffd814;
+    --yellow-hover: #f7ca00;
+    --link: #007185;
+    --link-hover: #c7511f;
+    --text: #0f1111;
+    --text-muted: #565959;
+    --border: #d5d9d9;
+    --font: "Amazon Ember", Arial, Helvetica, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+button, input { font-family: var(--font); }
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 2px;
+}
+
+/* ---------- Header ---------- */
 .header {
-    padding: 30px;
-    background-color: rgb(29, 40, 52);
-}
-.leftSide {
-    background-color: lightblue;
-    height: 50px;
-    width: 350px;
-    justify-content: center;
-}
-.rightSide {
-    background-color: lightblue;
-    height: 50px;
-    width: 120px;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: 50px;
-}
-.searchBar {
-    background-color: rgb(35, 47, 62);
-    justify-content: center;
+    background: var(--nav-dark);
+    color: #fff;
+    display: flex;
     align-items: center;
-    height: 100px;
+    justify-content: space-between;
+    padding: 12px 28px;
+    min-height: 72px;
+}
+.leftSide, .rightSide { display: flex; align-items: center; }
+.leftSide p, .rightSide p { margin: 0; }
+
+.menuButton {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 22px;
+    padding: 10px 12px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.menuButton:hover, .headerLink:hover { border-color: #fff; }
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+.logo img { display: block; height: 50px; width: auto; }
+.logo:hover { border-color: #fff; }
+
+.headerLink {
+    color: #fff;
+    font-weight: 700px;
+    font-size: 15px;
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.headerLink .fa { margin-right: 8px; }
+
+/* ---------- Search bar ---------- */
+.searchBar {
+    background: var(--nav-mid);
+    padding: 16px 28px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 }
 .inputBar {
-    height: 50%;
-    margin-left: 30px;
-    margin-top: 20px;
+    height: 46px;
+    padding: 0 18px;
+    border: 0;
+    border-right: 1px solid var(--border);
+    background: #fff;
+    font-size: 15px;
+    color: var(--text);
+    min-width: 0;
 }
+.inputBar.college { flex: 2 1 0; max-width: 686px; border-radius: 4px 0 0 4px; }
+.inputBar.location { flex: 1 1 0; max-width: 343px; border-right: 0; }
+.inputBar::placeholder { color: #767676; }
+.searchButton {
+    height: 46px;
+    width: 56px;
+    border: 0;
+    border-radius: 0 4px 4px 0;
+    background: var(--orange-soft);
+    color: var(--nav-dark);
+    font-size: 20px;
+    cursor: pointer;
+}
+.searchButton:hover { background: var(--orange); }
+
+/* ---------- Hero ---------- */
 .encouragement {
-    background-color: rgb(29, 40, 52);
-    padding: 20px;
-    justify-content: center;
+    background: var(--hero-bg);
+    padding: 48px 28px 180px;
 }
 .encouragementInner {
-    width: 70%;
-    height: 150px;
-    padding: 20px;
-    justify-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 40px;
+    align-items: center;
 }
-.innerImage {
-    width: 20%;
-    height: 100%;
-    background-color: aqua;
-    margin-left: 10px;
-}
-.innerText {
-    margin-left: 10px;
-    width: 200px;
-    height: fit-content;
-    background-color: aqua;
-
-}
-.findButton {
-    height: 40%;
-    vertical-align: middle;
-    margin-left: 20px;
-    padding: 30px;
-    justify-self: center;
-}
-.container {
-    display: flex;
+.innerImage img {
+    display: block;
     width: 100%;
-    justify-content: center;
-    padding: 10px;
-    background-color: rgb(234, 237, 242);
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #cfd8dc;
+    border-radius: 2px;
 }
-.wrapper {
-    text-align: center;
-    background-color: white;
+.innerText { color: #fff; }
+.innerText p { margin: 0; font-size: 28px; font-weight: 700; line-height: 1.3; }
+.innerText span { display: block; margin-top: 16px; font-weight: 400; color: #e3e6e6; line-height: 1.6; }
+
+/* ---------- Card grid ---------- */
+.container {
+    max-width: 1500px;
+    margin: 0 auto 48px;
+    padding: 0 28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
 }
+.container.first { margin-top: -140px; position: relative; z-index: 1; }
+.container.section { display: block; }
+.container.section > .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+
+.sectionTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+.infoBox1 {
+    background: var(--card-bg);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.infoBox1 h1 { font-size: 21px; font-weight: 700; line-height: 1.3; margin: 0; }
+.infoBox1 h2 { font-size: 15px; font-weight: 400; color: var(--text); line-height: 1.6; margin: 0; }
+.infoBox1 .actions { margin-top: auto; padding-top: 18px; }
+
+.infoBox1 img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #dfe3e6;
+    display: block;
+    margin-bottom: 6px;
+}
+.infoBox1 a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: auto;
+    cursor: pointer;
+}
+.infoBox1 a:hover { color: var(--link-hover); text-decoration: underline; }
+
+/* Cards with a "Learn more" link get a slight shadow on hover */
+.infoBox1.media { transition: box-shadow 0.2s ease; }
+.infoBox1.media:hover { box-shadow: 0 4px 14px rgba(15, 17, 17, 0.18); }
+
 .button {
-    position: absolute;
-    top: 50%;
+    background: var(--yellow);
+    border: 1px solid #fcd200;
+    border-radius: 20px;
+    padding: 10px 26px;
+    font-size: 15px;
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+}
+.button:hover { background: var(--yellow-hover); border-color: #f2c200; }
+
+/* ---------- Profile ---------- */
+.profileWrap {
+    grid-column: 1 / -1;
+    background: var(--card-bg);
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+.profilePicture {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #cfd8dc;
+    border: 1px solid var(--border);
+    flex: none;
+}
+.profile h1 { font-size: 21px; margin: 0 0 8px; }
+.profile h2 { font-size: 15px; font-weight: 400; color: var(--text-muted); margin: 0 0 10px; }
+.profile h3 { font-size: 15px; font-weight: 400; font-style: italic; margin: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+    .container, .container.section > .cards { grid-template-columns: repeat(2, 1fr); }
+    .encouragementInner { grid-template-columns: 1fr 1fr; }
+    .innerText { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+    .header, .searchBar, .container, .encouragement { padding-left: 16px; padding-right: 16px; }
+    .container, .container.section > .cards { grid-template-columns: 1fr; gap: 24px; }
+    .encouragement { padding-bottom: 120px; }
+    .container.first { margin-top: -90px; }
+    .searchBar { flex-wrap: wrap; gap: 12px; }
+    .inputBar.college, .inputBar.location { flex: 1 1 100%; max-width: none; border-radius: 4px; border-right: 0; }
+    .searchButton { width: 100%; border-radius: 4px; }
+    .logo img { height: 40px; }
+    .profileWrap { flex-direction: column; text-align: center; }
 }
